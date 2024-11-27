@@ -1,0 +1,32 @@
+<div class="main">
+  <header class="header-title">Employee List</header>
+
+  <div class="content">
+    @for (employee of employeesList(); track $index) {
+    <div class="employee-card" (swiperight)="onSwipeRight(employee.id)">
+      <div class="employee-info" (click)="editEmployee(employee)">
+        <div class="employee-name">
+          <strong>{{ employee.name }}</strong>
+        </div>
+        <div class="employee-role">{{ employee.role }}</div>
+        <div class="employee-date">
+          {{ employee.fromDate | date : "dd/MM/yyyy" }} -
+          {{ employee.toDate | date : "dd/MM/yyyy" }}
+        </div>
+      </div>
+    </div>
+    } @empty {
+    <div class="no-data-found">
+      <img src="assets/no-data-found.png" alt="" srcset="" />
+    </div>
+    }
+
+    <img
+      class="plus-icon"
+      [routerLink]="['/add-employee']"
+      src="assets/plus.png"
+      alt=""
+      srcset=""
+    />
+  </div>
+</div>

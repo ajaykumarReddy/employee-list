@@ -1,0 +1,51 @@
+// Add the following css
+
+.main {
+  width: 100%;
+  min-height: 100dvh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  padding: 1rem;
+  background-color: var(--bg-blue);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.plus-icon {
+  position: fixed;
+  bottom: 38px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.no-data-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+//employee card css in table design
+.employee-card {
+  padding: 8px 1rem;
+  margin: 8px 0;
+  border-bottom: 1px solid;
+
+  .employee-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
